@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> <!--Link to CSS-->
+    <link rel="icon" type="image/jpg" href="favicon.jpg"> <!--Favicon Image-->
+    <title>Assemble with Care</title> <!---Title-->
+</head>
+<body>
+    <header>
+        <!--Navbar code-->
+        <img src="gamelogo.png" id="logo-navbar" alt="awc-logo">
+        <nav>
+            <ul>
+                <!--Navigation Links-->
+                <li><a href="home-index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="features.html">FEATURES</a></li>
+                <li><a href="landing.html">GAMEPLAY</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="https://ustwogames.co.uk/">STUDIO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Video Background on loop-->
+        <video autoplay loop muted plays-inline class="background-video">
+            <source src="awc-video-short.mp4" type="video/mp4">
+        </video>
+    </main>
+    <!--Download Hyperlinked Images-->
+    <div class="container"> <!--Flexbox container-->
+        <div class="blackbox"><!--same size div-->
+            <!--Download in App Store-->
+           <a href="https://apps.apple.com/us/app/assemble-with-care/id6459060454">
+             <button class="img">
+                <img src="apple.png" id="apple-img">
+             </button>
+            </a>
+        </div>
+        <div class="blackbox">
+            <!--Download in Google Store-->
+            <a href="https://play.google.com/store/apps/details?id=com.ustwo.awc&hl=en&pli=1">
+             <button class="img">
+                <img src="google.png" id="google-img">
+             </button>
+            </a>
+        </div>
+        <div class="blackbox">
+            <!--Download in Steam-->
+            <a href="https://store.steampowered.com/app/1202900/Assemble_with_Care/">
+            <button class="img">
+                <img src="steam.png" id="steam-img">
+            </button>
+            </a>
+        </div>
+    </div>
+    <!--End of Download Links-->
+    <!--Introductory Section-->
+    <section class="container-desc">
+        <!--Introduction Message: about the game-->
+        <div class="intro-msg"> <!--placed in a div for better control-->
+            <p class="text">From the studio that brought you <i>Monument Valley</i>, comes a story about taking things apart and putting ourselves back together. With <i>handcrafted visuals</i>, enjoy gameplay rendered in a beautiful, impressionist style, alongside a completely hand-illustrated story.</i></p>
+        </div>
+        <div class="trailer"> <!--placed in a div for better control-->
+            <!--Video of the trailer with controls-->
+            <video plays-inline controls class="trailer">
+                <source src="awc-video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    <!--Learn More button that leads to About.html-->
+        <button class="button" onclick="window.location.href='about.html'">Learn More</button>
+
+    <!---A clear div or spacing-->
+    <div class="clear">
+    </div>
+    <!---A clear div or spacing-->
+    <!--Footer with container-->
+    <footer>
+        <!--Flexbox container -->
+        <div class="container-footer">
+            <!--ustwo logo -  hyperlinked images-->
+            <div class="ustwo-logo">
+                <a href="https://ustwogames.co.uk/">
+                <img src="ustwogames.png" alt="ustwo-games-logo">
+            </a>
+            </div>
+            <div class="line">
+            </div>
+              <!--instagram logo -  hyperlinked images-->
+            <div class="ig-logo">
+            <a href="https://www.instagram.com/ustwogames/">
+                <img src="ig-logo.webp" alt="ig-logo">
+            </a>
+            </div>
+            <!--twitter logo -  hyperlinked images-->
+            <div class="twitter">
+                <a href="https://x.com/ustwogames">
+                <img src="x.png" alt="x-logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+<!--End of Footer-->
+</body>
+</html>

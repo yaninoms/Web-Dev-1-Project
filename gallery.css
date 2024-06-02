@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Apply box-sizing to all elements, margin left to 0.7em, and reset padding */
+* {
+    box-sizing: border-box;
+    margin-left: 0.7em;
+    padding: 0;
+}
+
+/* Header (navigation bar) styling */
+header {
+    position: fixed; /* Fix header at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    padding: 20px 100px; /* Padding for spacing */
+    background: white; /* Transparent background */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center align items */
+    transition: 0.3s; /* Transition effect */
+    z-index: 100; /* Ensure header is above other elements */
+}
+
+/* Navigation link styling */
+nav a {
+    position: relative;
+    font-family: "Jost", sans-serif; /* Custom font */
+    font-weight: bold;
+    display: inline-block;
+    color: #0d0d2a; /* Dark text color */
+    font-size: 20px; /* Font size */
+    font-style: bold;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Pseudo-element for hover underline effect */
+nav a::before {
+    content: ''; /* Adding pseudo element content */
+    position: absolute; /* Absolute position for proper positioning */
+    top: 100%; /* Positioning below anchor */
+    left: 0; /* Aligning with left */
+    width: 0; /* Initially no width */
+    height: 2px; /* Setting height */
+    background: #0d0d2a; /* Underline color */
+    transition: .3s; /* Adding transition for smooth effect */
+}
+
+/* Hover effect for navigation links */
+nav a:hover::before {
+    width: 100%; /* Increasing width on hover */
+}
+
+/* Logo in the navbar styling */
+#logo-navbar {
+    aspect-ratio: 10 / 3; /* Aspect ratio for logo */
+    width: 10rem; /* Width of logo */
+    height: 4rem; /* Height of logo */
+}
+
+/* Navigation list styling */
+nav > ul {
+    display: flex;
+    justify-content: space-around; /* Space around items */
+    list-style-type: none; /* Remove list bullets */
+    flex-wrap: wrap; /* Wrap items if necessary */
+    align-items: center; /* Center align items */
+    padding-inline-start: 0; /* Remove padding from start */
+    margin-block: 0; /* Remove block margin */
+    height: 100%;
+}
+
+/* List item styling within the navigation */
+nav > ul > li {
+    color: #dfdfe2; /* Light text color */
+    margin: 0 0.4rem; /* Margin around items */
+    padding: 0.4rem; /* Padding for spacing */
+    display: block;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px; /* Maximum width */
+    width: 95%; /* Container width */
+    justify-content: center; /* Center align items */
+    margin-top: 1vh; /* Top margin */
+}
+
+/* Slider wrapper styling */
+.slider-wrapper {
+    position: relative;
+}
+
+/* Slider button styling */
+.slider-wrapper .slide-button {
+    position: absolute; /* Absolute position */
+    top: 50%; /* Center vertically */
+    outline: none; /* Remove outline */
+    border: none; /* Remove border */
+    height: 50px; /* Button height */
+    width: 50px; /* Button width */
+    z-index: 5; /* Ensure above other elements */
+    color: #fff; /* Text color */
+    display: flex; /* Flexbox for layout */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 2.2rem; /* Font size */
+    background: #000; /* Background color */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align items */
+    border-radius: 50%; /* Rounded corners */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+/* Hover effect for slider buttons */
+.slider-wrapper .slide-button:hover {
+    background: #404040; /* Darker background on hover */
+}
+
+/* Previous slide button styling */
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px; /* Position left */
+    display: none; /* Initially hidden */
+}
+
+/* Next slide button styling */
+.slider-wrapper .slide-button#next-slide {
+    right: -25px; /* Position right */
+}
+
+/* Image list styling within the slider */
+.slider-wrapper .image-list {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(10, 1fr); /* 10 columns */
+    gap: 18px; /* Gap between items */
+    font-size: 0; /* Remove font size */
+    list-style: none; /* Remove list bullets */
+    margin-bottom: 30px; /* Bottom margin */
+    overflow-x: auto; /* Horizontal scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar in WebKit browsers */
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Image item styling within the list */
+.slider-wrapper .image-list .image-item {
+    width: 900px; /* Image width */
+    height: 500px; /* Image height */
+    object-fit: cover; /* Cover the container */
+}
+
+/* Body styling */
+body {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align items */
+    min-height: 120vh; /* Minimum height */
+    background: #ffffff; /* White background */
+}
+
+/* Slider scrollbar container styling */
+.container .slider-scrollbar {
+    height: 24px; /* Scrollbar height */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center align items */
+}
+
+/* Hover effect for slider scrollbar */
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px; /* Increase height on hover */
+}
+
+/* Scrollbar track styling */
+.slider-scrollbar .scrollbar-track {
+    height: 2px; /* Track height */
+    width: 100%; /* Full width */
+    background: #ccc; /* Light background */
+    position: relative; /* Relative positioning */
+    align-items: center; /* Center align items */
+    display: flex; /* Flexbox for layout */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Scrollbar thumb styling */
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute; /* Absolute position */
+    height: 100%; /* Full height */
+    top: 0;
+    bottom: 0;
+    width: 50%; /* Thumb width */
+    background: #000; /* Dark background */
+    border-radius: inherit; /* Inherit border radius */
+    cursor: grab; /* Grab cursor */
+}
+
+/* Active state for scrollbar track */
+.slider-scrollbar .scrollbar-track:active {
+    cursor: grabbing; /* Grabbing cursor */
+    height: 8px; /* Increase height */
+    top: -2px;
+}
+
+/* Pseudo-element for scrollbar thumb */
+.slider-scrollbar .scrollbar-thumb::after {
+    content: ""; /* Empty content */
+    position: absolute; /* Absolute position */
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Button styling */
+.button {
+    align-items: center; /* Center align items */
+    background-color: #ffffff; /* White background */
+    border: 2px solid #111; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Box sizing */
+    color: #111; /* Text color */
+    cursor: pointer; /* Pointer cursor */
+    display: flex; /* Flexbox for layout */
+    font-family: Inter, sans-serif; /* Custom font */
+    font-size: 16px; /* Font size */
+    height: 48px; /* Button height */
+    justify-content: center; /* Center align items */
+    line-height: 24px; /* Line height */
+    max-width: 100%; /* Maximum width */
+    padding: 0 25px; /* Padding for spacing */
+    position: relative; /* Relative position */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for WebKit */
+    touch-action: manipulation; /* Enable touch action */
+    margin: 20px auto 0; /* Margin for spacing */
+}
+
+/* Pseudo-element for button after state */
+.button:after {
+    background-color: #111; /* Dark background */
+    border-radius: 8px; /* Rounded corners */
+    content: ""; /* Empty content */
+    display: block; /* Display block */
+    height: 48px; /* Height */
+    left: 0;
+    width: 100%; /* Full width */
+    position: absolute; /* Absolute position */
+    top: -2px;
+    transform: translate(8px, 8px); /* Transform for effect */
+    transition: transform .2s ease-out; /* Smooth transition */
+    z-index: -1; /* Behind the button */
+}
+
+/* Hover effect for button */
+.button:hover:after {
+    transform: translate(0, 0); /* Reset transform on hover */
+}
+
+/* Active state for button */
+.button:active {
+    background-color: #f1f4fd; /* Light background */
+    outline: 0; /* Remove outline */
+}
+
+/* Hover effect for button */
+.button:hover {
+    outline: 0; /* Remove outline */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .button {
+        padding: 0 40px; /* Increase padding */
+    }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 15px; /* Scrollbar width */
+}
+
+/* Scrollbar track styling */
+::-webkit-scrollbar-track {
+    background: #ffffff; /* Track background */
+}
+
+/* Scrollbar thumb styling */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Rounded corners */
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 141, 185)); /* Gradient background */
+}
+
+

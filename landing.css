@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General box sizing for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  min-height: 100vh;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header styling (navigation bar) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+/* Navigation links styling */
+nav a {
+  position: relative;
+  font-family: "Jost", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  color: #0d0d2a;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Hover effect for navigation links */
+nav a::before {
+  content: ''; /* Pseudo element for underline effect */
+  position: absolute;
+  top: 100%; /* Positioned below the link */
+  left: 0;
+  width: 0; /* Initially no width */
+  height: 2px; /* Underline height */
+  background: #0d0d2a;
+  transition: 0.3s; /* Smooth transition */
+}
+
+/* Hover effect expansion */
+nav a:hover::before {
+  width: 100%; /* Full width on hover */
+}
+
+/* Logo styling in the navbar */
+#logo-navbar {
+  aspect-ratio: 10 / 3;
+  width: 10rem;
+  height: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation list styling */
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+/* List item styling within the navigation */
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.4rem;
+  padding: 0.4rem;
+  display: block;
+}
+
+/* Container for the video and text overall */
+.big-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin: 25vh 10vh 10vh 10vh;
+}
+
+
+/* Small container for text and video */
+.small-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vh;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Embedded video styling */
+.embed-video iframe {
+  border-radius: 10px;
+}
+
+/* Text styling */
+.text {
+  font-family: "Jost", sans-serif;
+  font-size: 1.5rem;
+  color: #09096f;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer container styling */
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  width: 120vh;
+  margin-top: 6vh;
+  justify-content: center;
+}
+
+/* Ustwo logo styling */
+.ustwo-logo {
+  height: 20vh;
+  width: 20vh;
+}
+
+/* Ustwo logo image styling */
+.ustwo-logo img {
+  min-height: 15vh;
+  max-height: 20vh;
+  opacity: 100%;
+}
+
+/* Ustwo logo image hover effect */
+.ustwo-logo img:hover {
+  opacity: 50%;
+}
+
+/* Line element styling */
+.line {
+  margin-top: 10vh;
+  height: 5px;
+  width: 80vh;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+}
+
+/* Instagram logo styling */
+.ig-logo {
+  height: 20vh;
+  width: 15vh;
+}
+
+/* Instagram logo image styling */
+.ig-logo img {
+  min-height: 1vh;
+  max-height: 9vh;
+  opacity: 100%;
+  margin: 5vh 3vh;
+}
+
+/* Instagram logo image hover effect */
+.ig-logo img:hover {
+  opacity: 50%;
+}
+
+/* Twitter logo styling */
+.twitter {
+  height: 20vh;
+  width: 15vh;
+}
+
+/* Twitter logo image styling */
+.twitter img {
+  min-height: 1vh;
+  max-height: 9vh;
+  margin: 5vh 3vh;
+  opacity: 100%;
+}
+
+/* Twitter logo image hover effect */
+.twitter img:hover {
+  opacity: 50%;
+}
+
+/* Footer styling */
+footer {
+  position: relative;
+  display: flex;
+  background-color: #1a1a48;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(rgb(255, 255, 255), rgb(255, 141, 185));
+}
+

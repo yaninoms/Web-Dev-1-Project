@@ -1,1 +1,0 @@
-Document.write("Hello World")
